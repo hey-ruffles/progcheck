@@ -8,6 +8,9 @@ Run commands sequentially, stopping on first failure.
 cargo install progcheck
 ```
 
+Prebuilt binaries are also attached to each GitHub Release:
+<https://github.com/hey-ruffles/progcheck/releases>
+
 ## Usage
 
 ```bash
@@ -53,7 +56,7 @@ progcheck -b 100 "cargo fmt --check" "cargo clippy" "cargo test"
 FAILED: cargo test
 Output truncated: omitted 899 characters; showing first 50 and last 50 characters.
     Finished `test` profile [unoptimized + debugin
-... output in the middle omitted ...
+... middle output omitted ...
 ror: test failed, to rerun pass `--bin progcheck`
 ```
 
