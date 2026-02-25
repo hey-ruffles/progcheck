@@ -62,6 +62,7 @@
             pkgs.cargo-nextest
             pkgs.cargo-edit
             pkgs.pkg-config
+            pkgs.cargo-dist
             hooksmith
           ];
         };
