@@ -13,6 +13,8 @@ Prebuilt binaries are also attached to each GitHub Release:
 
 ## Usage
 
+### Normal usage
+
 ```bash
 progcheck -- "cargo fmt --check" "cargo clippy" "cargo test"
 ```
@@ -21,8 +23,7 @@ No output on success:
 ```bash
 ```
 
-
-Now break a test.
+### Now break a test
 
 ```bash
 progcheck -- "cargo fmt --check" "cargo clippy" "cargo test"
@@ -61,7 +62,8 @@ test result: FAILED. 5 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; 
 error: test failed, to rerun pass `--bin progcheck`
 ```
 
-Limit output to 100 chars just in case:
+### Limit output to 100 chars just in case
+
 ```bash
 progcheck -b 100 "cargo fmt --check" "cargo clippy" "cargo test"
 ```
@@ -85,7 +87,7 @@ ror: test failed, to rerun pass `--bin progcheck`
 - Commands run sequentially
 - Output is captured while commands run
 - Successful command output is discarded
-- On failure: prints `FAILED: <cmd>` then the captured stdout/stderr
+- Only the first failed command's output is printed: `FAILED: <cmd>` then the captured stdout/stderr
 - If output exceeds `--buffer-size`, `progcheck` shows:
   - an explicit truncation message at the top,
   - the beginning and end of output,
