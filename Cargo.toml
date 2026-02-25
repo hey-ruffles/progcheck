@@ -1,6 +1,6 @@
 [package]
 name = "progcheck"
-version = "0.1.3"
+version = "0.1.4"
 edition = "2024"
 rust-version = "1.85"
 description = "Run commands sequentially and stop on first failure with truncated output replay."
