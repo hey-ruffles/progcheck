@@ -17,7 +17,18 @@ Prebuilt binaries are also attached to each GitHub Release:
 progcheck -- "cargo fmt --check" "cargo clippy" "cargo test"
 ```
 
-Now break a test:
+No output on success:
+```bash
+```
+
+
+Now break a test.
+
+```bash
+progcheck -- "cargo fmt --check" "cargo clippy" "cargo test"
+```
+
+Output on failure:
 ```bash
 FAILED: cargo test
     Finished `test` profile [unoptimized + debuginfo] target(s) in 0.05s
@@ -53,6 +64,10 @@ error: test failed, to rerun pass `--bin progcheck`
 Limit output to 100 chars just in case:
 ```bash
 progcheck -b 100 "cargo fmt --check" "cargo clippy" "cargo test"
+```
+
+Truncated output on failure:
+```bash
 FAILED: cargo test
 Output truncated: omitted 899 characters; showing first 50 and last 50 characters.
     Finished `test` profile [unoptimized + debugin
